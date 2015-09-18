@@ -31,7 +31,8 @@
 #include "Arduino.h"
 #else
 // #include <WProgram.h>
-#include "Wire.h"
+#include "spark_wiring.h"
+#include "spark_wiring_i2c.h"
 #endif
 
 #define SeeedOLED_Max_X                 127 //128 Pixels
