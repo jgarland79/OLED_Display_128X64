@@ -1,5 +1,5 @@
 {
-    "name": "OLED_Display_128X64",
+    "name": "SeeedOLED",
     "version": "0.1.3",
     "author": "Seeed-Studio",
     "license": "GPLv2",
