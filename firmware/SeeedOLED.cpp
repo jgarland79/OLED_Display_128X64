@@ -22,10 +22,20 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#include "Wire.h"
+#ifdef __AVR__
+ #include "Wire.h"
+#else
+ #include "spark_wiring.h"
+ #include "spark_wiring_i2c.h"
+#endif
+
 #include "SeeedOLED.h"
 
-#include <avr/pgmspace.h>
+#ifdef __AVR__
+ #include <avr/pgmspace.h>
+#else
+ #define pgm_read_byte(addr) (*(const unsigned char *)(addr))
+#endif
 
 // 8x8 Font ASCII 32 - 127 Implemented
 // Users can modify this to support more characters(glyphs)
