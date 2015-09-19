@@ -33,8 +33,8 @@
 
 #ifdef __AVR__
  #include <avr/pgmspace.h>
-#else
- #define pgm_read_byte(addr) (*(const unsigned char *)(addr))
+// #else
+// #define pgm_read_byte(addr) (*(const unsigned char *)(addr))
 #endif
 
 // 8x8 Font ASCII 32 - 127 Implemented
